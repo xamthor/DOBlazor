@@ -1,0 +1,11 @@
+name: blazor-wasm
+static_sites:
+- name: site
+  github:
+    repo: xamthor/DOBlazor
+    branch: master
+    deploy_on_push: true
+  dockerfile_path: Dockerfile.build 
+  output_dir: /output/wwwroot
+  index_document: index.html
+  catchall_document: index.html

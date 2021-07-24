@@ -1,0 +1,6 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0
+WORKDIR /app
+COPY blazewasm.csproj blazewasm.csproj
+RUN dotnet restore blazewasm.csproj
+COPY . .
+RUN dotnet publish -c Release -o /output --no-restore --nologo
